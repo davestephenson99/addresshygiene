@@ -27,7 +27,7 @@ class AddressHygieneApi(Resource):
         parser.add_argument('ADDRESS8', type=str)
         parser.add_argument('ADDRESS9', type=str)
         parser.add_argument('POSTCODE', type=str)
-       args = parser.parse_args()
+        args = parser.parse_args()
 
         # This sets the return values
         response['PAF_POBOX'] = ''
