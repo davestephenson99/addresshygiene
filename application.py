@@ -30,21 +30,23 @@ class AddressHygieneApi(Resource):
         args = parser.parse_args()
 
         # This sets the return values
-        response['PAF_POBOX'] = ''
-        response['PAF_ABODE'] = ''
-        response['PAF_HOUSENAME'] = ''
-        response['PAF_HOUSENUM'] = args['ADDRESS1']
-        response['PAF_STREET1'] = args['ADDRESS2']
-        response['PAF_STREET1TYPE'] = ''
-        response['PAF_STREET2'] = args['ADDRESS3']
-        response['PAF_SUBLOCALITY'] = ''
-        response['PAF_LOCALITY'] = ''
-        response['PAF_TOWN'] = args['ADDRESS4']
-        response['PAF_POSTCODE'] = args['POSTCODE']
-        response['PAF_DPS'] = ''
-        response['PAFEXCEPTIONMESSAGE'] = 'OK'
-        response['PAFENGINEDATE'] = 'Jan 2022'
-        response['PAFSTATUS'] = 'OK'
+        response = dict(
+          PAF_POBOX = '',
+          PAF_ABODE = '',
+          PAF_HOUSENAME = '',
+          PAF_HOUSENUM = args['ADDRESS1'],
+          PAF_STREET1 = args['ADDRESS2'],
+          PAF_STREET1TYPE = '',
+          PAF_STREET2 = args['ADDRESS3'],
+          PAF_SUBLOCALITY = '',
+          PAF_LOCALITY' = '',
+          PAF_TOWN = args['ADDRESS4'],
+          PAF_POSTCODE = args['POSTCODE'],
+          PAF_DPS = '',
+          PAFEXCEPTIONMESSAGE = 'OK',
+          PAFENGINEDATE = 'Jan 2022',
+          PAFSTATUS = 'OK'
+        )
 
         return jsonify(response)
 
