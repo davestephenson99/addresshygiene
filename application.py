@@ -39,7 +39,7 @@ class AddressHygieneApi(Resource):
           PAF_STREET1TYPE = '',
           PAF_STREET2 = args['ADDRESS3'],
           PAF_SUBLOCALITY = '',
-          PAF_LOCALITY' = '',
+          PAF_LOCALITY = '',
           PAF_TOWN = args['ADDRESS4'],
           PAF_POSTCODE = args['POSTCODE'],
           PAF_DPS = '',
